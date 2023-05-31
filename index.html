@@ -27,6 +27,7 @@
         </div>
         <div class="flex lg:hidden">
           <button
+            id="menu-toggle"
             type="button"
             class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
@@ -51,7 +52,6 @@
           <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
             >Services</a
           >
-
           <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
             >Works</a
           >
@@ -73,7 +73,7 @@
       </nav>
 
       <!-- Mobile menu, show/hide based on menu open state. -->
-      <div class="lg:hidden" role="dialog" aria-modal="true">
+      <div class="block lg:hidden" role="dialog" aria-modal="true" id="menu">
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-10"></div>
         <div
@@ -88,7 +88,11 @@
                 alt=""
               />
             </a>
-            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <button
+              type="button"
+              id="close-menu"
+              class="-m-2.5 rounded-md p-2.5 text-gray-700"
+            >
               <span class="sr-only">Close menu</span>
               <svg
                 class="h-6 w-6"
@@ -149,5 +153,19 @@
     </header>
 
     <!-- Banners -->
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("menu").classList.toggle("hidden");
+        });
+
+      document
+        .getElementById("close-menu")
+        .addEventListener("click", function () {
+          document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
   </body>
 </html>
