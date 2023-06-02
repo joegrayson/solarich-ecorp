@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "aAtomicMd";
+  src: url("../assets/fonts/aAtomicMd.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MusticaPro";
+  src: url("../assets/fonts/MusticaPro-SemiBold.otf") format("opentype");
+  /* Add more file formats if necessary */
+  /* Specify the correct path to your font files */
+  /* Update the font-family name as desired */
+}
