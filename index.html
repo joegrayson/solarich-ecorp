@@ -278,6 +278,7 @@
           </div>
 
           <button
+            id="scrollToTopBtn"
             onclick="scrollToTop()"
             class="fixed bottom-10 right-10 bg-white text-green-500 p-2 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition-colors focus:outline-none"
             title="Scroll to Top"
@@ -351,26 +352,39 @@
     <!-- End of Hero Section -->
 
     <script>
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("click", function () {
-          document.getElementById("menu").classList.toggle("hidden");
-        });
+      const menuToggle = document.getElementById("menu-toggle");
+      menuToggle.addEventListener("click", () => {
+        document.getElementById("menu").classList.toggle("hidden");
+      });
 
-      document
-        .getElementById("close-menu")
-        .addEventListener("click", function () {
-          document.getElementById("menu").classList.toggle("hidden");
-        });
+      const closeMenu = document.getElementById("close-menu");
+      closeMenu.addEventListener("click", () => {
+        document.getElementById("menu").classList.toggle("hidden");
+      });
 
-      function scrollToTop() {
+      const scrollToTopButton = document.getElementById("scrollToTopBtn");
+
+      const scrollToTop = () => {
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         });
-      }
+      };
 
-      var scrollToTopButton = document.getElementById("scrollToTopBtn");
+      const toggleScrollToTopButton = () => {
+        if (window.innerWidth <= 767) {
+          scrollToTopButton.style.display = "none";
+        } else {
+          scrollToTopButton.style.display = "block";
+        }
+      };
+
+      // Initial check when the page loads
+      toggleScrollToTopButton();
+
+      // Check on window resize
+      window.addEventListener("resize", toggleScrollToTopButton);
+
       scrollToTopButton.addEventListener("click", scrollToTop);
     </script>
   </body>
