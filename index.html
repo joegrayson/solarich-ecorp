@@ -15,8 +15,22 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <title>Welcome to Solarich!</title>
   </head>
-  <body>
+  <body class="dark:bg-gray-800 dark:text-gray-100">
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --underline-color: #000000; /* Set the underline color to white */
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --underline-color: #ffffff;
+        }
+      }
+
       .nav-link {
         position: relative;
         display: inline-block;
@@ -34,88 +48,103 @@
       }
 
       .nav-link:hover::before {
-        background-color: #000;
-      }
-
-      .brand-association-section {
-        background-color: white;
-        padding: 2rem 0;
+        background-color: var(--underline-color);
       }
 
       .brand-logo img {
-        filter: invert(100%);
+        filter: none;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .brand-logo img {
+          filter: invert(100%);
+        }
+      }
+
+      .my-background {
+        background-image: url("/assets/images/bg-image-1.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.8;
+        height: 100vh;
       }
     </style>
 
     <header class="bg-white dark:bg-gray-900">
       <nav
-        class="container mx-auto flex flex-wrap max-w-7xl items-center justify-between py-6 lg:px-8"
-        aria-label="Global"
+        class="fixed bg-white dark:bg-gray-900 top-0 left-0 right-0 shadow-lg"
       >
-        <div class="flex lg:flex-1 px-6">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Solarich ECorp</span>
-            <img
-              class="h-8 w-auto"
-              src="assets\images\website-logo-solarich.png"
-              alt=""
-            />
-          </a>
-        </div>
-        <div class="flex lg:hidden px-6">
-          <button
-            id="menu-toggle"
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        <div
+          class="container mx-auto flex flex-wrap max-w-7xl items-center justify-between py-6 lg:px-8"
+          aria-label="Global"
+        >
+          <div class="flex lg:flex-1 px-6">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Solarich ECorp</span>
+              <img
+                class="h-8 w-auto"
+                src="assets\images\website-logo-solarich.png"
+                alt=""
               />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          <a
-            href="#"
-            class="nav-link text-sm font-semibold leading-6 text-gray-900 dark:text-white"
-            >Services</a
-          >
-          <a
-            href="#"
-            class="nav-link text-sm font-semibold leading-6 text-gray-900 dark:text-white"
-            >Works</a
-          >
-          <a
-            href="#"
-            class="nav-link text-sm font-semibold leading-6 text-gray-900 dark:text-white"
-            >About</a
-          >
-          <a
-            href="#"
-            class="nav-link text-sm font-semibold leading-6 text-gray-900 dark:text-white"
-            >Contact</a
-          >
-          <a
-            href="#"
-            class="nav-link text-sm font-semibold leading-6 text-gray-900 dark:text-white"
-            >Training</a
-          >
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Log in <span aria-hidden="true">&rarr;</span></a
-          >
+            </a>
+          </div>
+          <div class="flex lg:hidden px-6">
+            <button
+              id="menu-toggle"
+              type="button"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a
+              href="#"
+              class="nav-link text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="nav-link text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+              >Works</a
+            >
+            <a
+              href="#"
+              class="nav-link text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+              >About</a
+            >
+            <a
+              href="#"
+              class="nav-link text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+              >Contact</a
+            >
+            <a
+              href="#"
+              class="nav-link text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+              >Training</a
+            >
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="#"
+              class="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+              >Log in <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
         </div>
       </nav>
 
@@ -197,24 +226,27 @@
           </div>
         </div>
       </div>
+    </header>
 
-      <!-- Hero Section -->
+    <!-- Hero Section -->
 
-      <section class="dark:bg-gray-800 dark:text-gray-100">
-        <div
-          class="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl"
-        >
-          <div class="max-w-lg mx-auto">
-            <h1
-              class="text-4xl font-bold leading-none sm:text-5xl text-green-900 dark:text-white"
-            >
-              Sustainable <span class="text-yellow-400">energy</span> for a
-              sustainable <span class="text-green-600">future</span>.
-            </h1>
-            <p class="px-8 mt-4 mb-12 text-xl text-green-900">
-              Allow us to help you empower your home and business with Solar PV
-              System.
-            </p>
+    <section class="dark:bg-gray-800 dark:text-gray-100">
+      <div
+        class="container mt-20 mb-20 mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl"
+      >
+        <div class="max-w-lg mx-auto">
+          <h1
+            class="text-4xl font-bold leading-none sm:text-5xl text-green-900 dark:text-white"
+          >
+            Sustainable <span class="text-yellow-400">energy</span> for a
+            sustainable <span class="text-green-600">future</span>.
+          </h1>
+          <p class="px-8 mt-4 mb-12 text-xl text-green-900 dark:text-white">
+            Allow us to help you empower your home and business with Solar PV
+            System.
+          </p>
+
+          <div class="max-w-xs mx-auto">
             <a
               class="group flex items-center justify-between gap-4 rounded-lg border border-current px-5 py-3 text-green-500 transition-colors hover:bg-green-500 focus:outline-none focus:ring active:bg-green-400 mt-6"
               href="#"
@@ -244,66 +276,79 @@
               </span>
             </a>
           </div>
+
+          <button
+            onclick="scrollToTop()"
+            class="fixed bottom-10 right-10 bg-white text-green-500 p-2 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition-colors focus:outline-none"
+            title="Scroll to Top"
+          >
+            <svg
+              class="w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 10l7-7m0 0l7 7m-7-7v18"
+              />
+            </svg>
+          </button>
         </div>
+      </div>
 
-        <!-- Brand Associations Images -->
+      <!-- Brand Associations Images -->
 
-        <div class="bg-white dark:bg-gray-900">
-          <div class="max-w-screen-xl mx-auto">
-            <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-              <div
-                class="brand-logo flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1"
-              >
-                <img
-                  src="assets\images\dasolar-removebg-preview.png"
-                  alt="brand-1"
-                />
-              </div>
+      <div class="max-w-screen-xl mx-auto">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+          <div
+            class="brand-logo flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1"
+          >
+            <img
+              src="assets\images\dasolar-removebg-preview.png"
+              alt="brand-1"
+            />
+          </div>
 
-              <div
-                class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1"
-              >
-                <img
-                  src="assets\images\deye-removebg-preview.png"
-                  alt="brand-1"
-                />
-              </div>
+          <div
+            class="brand-logo flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1"
+          >
+            <img src="assets\images\deye-removebg-preview.png" alt="brand-1" />
+          </div>
 
-              <div
-                class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1"
-              >
-                <img
-                  src="assets\images\ja-solar-removebg-preview.png"
-                  alt="brand-1"
-                />
-              </div>
+          <div
+            class="brand-logo flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1"
+          >
+            <img
+              src="assets\images\ja-solar-removebg-preview.png"
+              alt="brand-1"
+            />
+          </div>
 
-              <div
-                class="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1"
-              >
-                <img
-                  src="assets\images\longi-removebg-preview.png"
-                  alt="brand-1"
-                />
-              </div>
+          <div
+            class="brand-logo flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1"
+          >
+            <img src="assets\images\longi-removebg-preview.png" alt="brand-1" />
+          </div>
 
-              <div
-                class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1"
-              >
-                <img
-                  src="assets\images\meritsun-removebg-preview.png"
-                  alt="brand-1"
-                />
-              </div>
-            </div>
+          <div
+            class="brand-logo flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1"
+          >
+            <img
+              src="assets\images\meritsun-removebg-preview.png"
+              alt="brand-1"
+            />
           </div>
         </div>
+      </div>
 
-        <!-- End of Brand Associations Images -->
-      </section>
+      <!-- End of Brand Associations Images -->
+    </section>
 
-      <!-- End of Hero Section -->
-    </header>
+    <!-- End of Hero Section -->
 
     <script>
       document
@@ -317,6 +362,16 @@
         .addEventListener("click", function () {
           document.getElementById("menu").classList.toggle("hidden");
         });
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      var scrollToTopButton = document.getElementById("scrollToTopBtn");
+      scrollToTopButton.addEventListener("click", scrollToTop);
     </script>
   </body>
 </html>
