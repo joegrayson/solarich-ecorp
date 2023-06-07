@@ -41,6 +41,19 @@
         }
       }
 
+      .services-section {
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%235fe85f' fill-opacity='0.17'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      /* Dark mode style */
+      @media (prefers-color-scheme: dark) {
+        .services-section {
+          background-image: none;
+          background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+        }
+      }
+
       .nav-link {
         position: relative;
         display: inline-block;
@@ -240,7 +253,7 @@
 
     <!-- Hero Section -->
 
-    <section class="dark:bg-gray-800 dark:text-gray-100">
+    <section class="dark:bg-gray-800 dark:text-gray-100 hero-section">
       <div
         class="container mt-20 mb-24 mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl"
       >
@@ -392,15 +405,17 @@
 
       <!-- Services Cards -->
 
-      <div class="container px-8 py-10 max-w-screen-xl mx-auto">
+      <div
+        class="services-section container px-8 py-10 max-w-screen-xl mx-auto dark:bg-gray-800"
+      >
         <div class="flex flex-wrap -m-4">
           <div class="p-4 md:w-1/3">
             <div
-              class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-lg transition-shadow dark:hover:shadow-gray-600"
+              class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow dark:hover:shadow-gray-600 bg-white dark:bg-gray-800"
             >
               <img
                 class="lg:h-48 md:h-36 w-full object-cover object-center"
-                src="assets\images\services-1-sample.jpg"
+                src="assets\images\sample-img-1.png"
                 alt="blog"
               />
               <div class="p-6">
@@ -418,11 +433,11 @@
           </div>
           <div class="p-4 md:w-1/3">
             <div
-              class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-lg transition-shadow dark:hover:shadow-gray-600"
+              class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow dark:hover:shadow-gray-600 bg-white dark:bg-gray-800"
             >
               <img
                 class="lg:h-48 md:h-36 w-full object-cover object-center"
-                src="assets\images\bg-image-1.jpg"
+                src="assets\images\sample-img-1.png"
                 alt="blog"
               />
               <div class="p-6">
@@ -441,11 +456,11 @@
           </div>
           <div class="p-4 md:w-1/3">
             <div
-              class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-lg transition-shadow dark:hover:shadow-gray-600"
+              class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-xl transition-shadow dark:hover:shadow-gray-600 bg-white dark:bg-gray-800"
             >
               <img
                 class="lg:h-48 md:h-36 w-full object-cover object-center"
-                src="assets\images\header-3.jpg"
+                src="assets\images\sample-img-1.png"
                 alt="blog"
               />
               <div class="p-6">
@@ -462,9 +477,9 @@
               </div>
             </div>
           </div>
-          <div class="max-w-xs mx-auto">
+          <div class="max-w-xs mx-auto mb-20">
             <a
-              class="group flex items-center justify-between gap-4 rounded-lg border border-current px-5 py-3 text-green-500 transition-colors hover:bg-green-500 focus:outline-none focus:ring active:bg-green-400 mt-6"
+              class="group flex items-center justify-between gap-4 rounded-lg border border-current px-5 py-3 text-green-500 transition-colors hover:bg-green-500 focus:outline-none focus:ring active:bg-green-400 mt-6 bg-white dark:bg-gray-800"
               href="#"
             >
               <span
@@ -503,23 +518,19 @@
     <!-- System Packages Section -->
 
     <section>
-      <div
-        class="container mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 sm:py-24 lg:me-0 lg:pe-0 lg:ps-8"
-      >
+      <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div
-          class="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16"
+          class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16"
         >
           <div
-            class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right shadow-xl p-8"
+            class="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right"
           >
-            <h2
-              class="text-3xl font-bold tracking-tight sm:text-4xl text-green-900 dark:text-white drop-shadow-md"
-            >
+            <h2 class="text-3xl font-bold sm:text-4xl">
               Solar PV System Packages
             </h2>
 
-            <p class="mt-4 text-gray-500">
-              Power your life with SOLARICH system packages
+            <p class="mt-4 text-gray-600">
+              Power your life with SOLARICH system packages.
             </p>
 
             <div class="max-w-xs mx-auto">
@@ -554,125 +565,196 @@
             </div>
           </div>
 
-          <div class="-mx-6 lg:col-span-2 lg:mx-0">
-            <div class="swiper-container !overflow-hidden">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <blockquote
-                    class="flex h-full flex-col justify-between bg-white p-12"
-                  >
-                    <div>
-                      <div class="mt-4">
-                        <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
-                          On-Grid System
-                        </p>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <a
+              class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-300 focus:outline-none focus:ring"
+              href="#"
+            >
+              <span class="inline-block rounded-lg bg-gray-50 p-3">
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+                  ></path>
+                </svg>
+              </span>
 
-                        <p class="mt-4 leading-relaxed text-gray-500">
-                          For the safest, most efficient and excellent service,
-                          SOLARICH is the right provider for you. We offer only
-                          the best products to ensure customer satisfaction.
-                          Grid-tied, on-grid, utility-interactive, grid intertie
-                          and grid backfeeding are all terms used to describe
-                          the same concept a solar system that is connected to
-                          the utility power grid.
-                        </p>
-                      </div>
-                    </div>
-                  </blockquote>
-                </div>
+              <h2 class="mt-2 font-bold">On-Grid System</h2>
 
-                <div class="swiper-slide">
-                  <blockquote
-                    class="flex h-full flex-col justify-between bg-white p-12"
-                  >
-                    <div>
-                      <div class="mt-4">
-                        <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
-                          On-Grid System
-                        </p>
+              <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </a>
 
-                        <p class="mt-4 leading-relaxed text-gray-500">
-                          For the safest, most efficient and excellent service,
-                          SOLARICH is the right provider for you. We offer only
-                          the best products to ensure customer satisfaction.
-                          Grid-tied, on-grid, utility-interactive, grid intertie
-                          and grid backfeeding are all terms used to describe
-                          the same concept a solar system that is connected to
-                          the utility power grid.
-                        </p>
-                      </div>
-                    </div>
-                  </blockquote>
-                </div>
+            <a
+              class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+              href="#"
+            >
+              <span class="inline-block rounded-lg bg-gray-50 p-3">
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path
+                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                  ></path>
+                </svg>
+              </span>
 
-                <div class="swiper-slide">
-                  <blockquote
-                    class="flex h-full flex-col justify-between bg-white p-12"
-                  >
-                    <div>
-                      <div class="mt-4">
-                        <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
-                          On-Grid System
-                        </p>
+              <h2 class="mt-2 font-bold">Off-Grid System</h2>
 
-                        <p class="mt-4 leading-relaxed text-gray-500">
-                          For the safest, most efficient and excellent service,
-                          SOLARICH is the right provider for you. We offer only
-                          the best products to ensure customer satisfaction.
-                          Grid-tied, on-grid, utility-interactive, grid intertie
-                          and grid backfeeding are all terms used to describe
-                          the same concept a solar system that is connected to
-                          the utility power grid.
-                        </p>
-                      </div>
-                    </div>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
+              <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </a>
+
+            <a
+              class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+              href="#"
+            >
+              <span class="inline-block rounded-lg bg-gray-50 p-3">
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path
+                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                  ></path>
+                </svg>
+              </span>
+
+              <h2 class="mt-2 font-bold">Hybrid System</h2>
+
+              <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </a>
+
+            <a
+              class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+              href="/accountant"
+            >
+              <span class="inline-block rounded-lg bg-gray-50 p-3">
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path
+                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                  ></path>
+                </svg>
+              </span>
+
+              <h2 class="mt-2 font-bold">Accountant</h2>
+
+              <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </a>
+
+            <a
+              class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+              href="/accountant"
+            >
+              <span class="inline-block rounded-lg bg-gray-50 p-3">
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path
+                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                  ></path>
+                </svg>
+              </span>
+
+              <h2 class="mt-2 font-bold">Accountant</h2>
+
+              <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </a>
+
+            <a
+              class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+              href="/accountant"
+            >
+              <span class="inline-block rounded-lg bg-gray-50 p-3">
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path
+                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                  ></path>
+                </svg>
+              </span>
+
+              <h2 class="mt-2 font-bold">Accountant</h2>
+
+              <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </a>
           </div>
-        </div>
-
-        <div class="flex justify-center gap-4 lg:hidden">
-          <button
-            aria-label="Previous slide"
-            class="prev-button rounded-full border border-pink-600 p-4 text-pink-600 hover:bg-pink-600 hover:text-white"
-          >
-            <svg
-              class="h-5 w-5 -rotate-180 transform"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 5l7 7-7 7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
-
-          <button
-            aria-label="Next slide"
-            class="next-button rounded-full border border-pink-600 p-4 text-pink-600 hover:bg-pink-600 hover:text-white"
-          >
-            <svg
-              class="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 5l7 7-7 7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </button>
         </div>
       </div>
     </section>
