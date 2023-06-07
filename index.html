@@ -20,6 +20,13 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha384-DfXdzVv8MXTSc3qT9R2vnYm6vE+tXkFD7gx3SV4XfdI2uTrz5wEhdk0BsXLgD/Nt"
+      crossorigin="anonymous"
+    />
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
@@ -49,6 +56,19 @@
       /* Dark mode style */
       @media (prefers-color-scheme: dark) {
         .services-section {
+          background-image: none;
+          background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+        }
+      }
+
+      .hero-section {
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.25' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+      }
+
+      /* Dark mode style */
+      @media (prefers-color-scheme: dark) {
+        .hero-section {
           background-image: none;
           background-color: rgb(31 41 55 / var(--tw-bg-opacity));
         }
@@ -271,7 +291,7 @@
 
           <div class="max-w-xs mx-auto">
             <a
-              class="group flex items-center justify-between gap-4 rounded-lg border border-current px-5 py-3 text-green-500 transition-colors hover:bg-green-500 focus:outline-none focus:ring active:bg-green-400 mt-6"
+              class="group flex items-center justify-between gap-4 rounded-lg border border-current px-5 py-3 text-green-500 transition-colors hover:bg-green-500 focus:outline-none focus:ring active:bg-green-400 mt-6 bg-white dark:bg-gray-800"
               href="#"
             >
               <span
@@ -326,7 +346,7 @@
 
       <!-- Brand Associations Images -->
 
-      <div class="max-w-screen-xl mx-auto">
+      <div class="max-w-screen-xl mx-auto bg-white dark:bg-gray-800">
         <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
           <div
             class="brand-logo flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1"
@@ -406,7 +426,7 @@
       <!-- Services Cards -->
 
       <div
-        class="services-section container px-8 py-10 max-w-screen-xl mx-auto dark:bg-gray-800"
+        class="services-section container px-8 py-10 max-w-screen-2xl mx-auto dark:bg-gray-800"
       >
         <div class="flex flex-wrap -m-4">
           <div class="p-4 md:w-1/3">
@@ -518,14 +538,18 @@
     <!-- System Packages Section -->
 
     <section>
-      <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+      <div
+        class="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+      >
         <div
           class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16"
         >
           <div
-            class="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right"
+            class="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right lg:text-left"
           >
-            <h2 class="text-3xl font-bold sm:text-4xl">
+            <h2
+              class="text-3xl font-bold sm:text-4xl text-green-900 dark:text-white"
+            >
               Solar PV System Packages
             </h2>
 
@@ -533,7 +557,7 @@
               Power your life with SOLARICH system packages.
             </p>
 
-            <div class="max-w-xs mx-auto">
+            <div class="max-w-xs mx-auto lg:mx-0">
               <a
                 class="group flex items-center justify-between gap-4 rounded-lg border border-current px-5 py-3 text-green-500 transition-colors hover:bg-green-500 focus:outline-none focus:ring active:bg-green-400 mt-6"
                 href="#"
@@ -566,25 +590,22 @@
           </div>
 
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <!-- If you want to change the columns just replace the sm:grid-cols-3 to any number you want. -->
             <a
               class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-300 focus:outline-none focus:ring"
               href="#"
             >
               <span class="inline-block rounded-lg bg-gray-50 p-3">
                 <svg
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
+                  height="1.5em"
+                  viewBox="0 0 640 512"
+                  style="fill: #006ba6"
                 >
+                  <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-                  ></path>
+                    d="M122.2 0C91.7 0 65.5 21.5 59.5 51.4L8.3 307.4C.4 347 30.6 384 71 384H288v64H224c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V384H569c40.4 0 70.7-36.9 62.8-76.6l-51.2-256C574.5 21.5 548.3 0 517.8 0H122.2zM260.9 64H379.1l10.4 104h-139L260.9 64zM202.3 168H101.4L122.2 64h90.4L202.3 168zM91.8 216H197.5L187.1 320H71L91.8 216zm153.9 0H394.3l10.4 104-169.4 0 10.4-104zm196.8 0H548.2L569 320h-116L442.5 216zm96-48H437.7L427.3 64h90.4l31.4-6.3L517.8 64l20.8 104z"
+                  />
                 </svg>
               </span>
 
@@ -601,22 +622,15 @@
             >
               <span class="inline-block rounded-lg bg-gray-50 p-3">
                 <svg
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
+                  height="1.5em"
+                  viewBox="0 0 512 512"
+                  style="fill: #16a34a"
                 >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                   <path
-                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
+                    d="M80 96c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32l96 0c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32h16c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64l16 0zm304 96c0-8.8-7.2-16-16-16s-16 7.2-16 16v32H320c-8.8 0-16 7.2-16 16s7.2 16 16 16h32v32c0 8.8 7.2 16 16 16s16-7.2 16-16V256h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H384V192zM80 240c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H96c-8.8 0-16 7.2-16 16z"
+                  />
                 </svg>
               </span>
 
@@ -633,122 +647,20 @@
             >
               <span class="inline-block rounded-lg bg-gray-50 p-3">
                 <svg
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
+                  height="1.5em"
+                  viewBox="0 0 576 512"
+                  style="fill: #f2bc17"
                 >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+
                   <path
-                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
+                    d="M96 0C78.3 0 64 14.3 64 32v96h64V32c0-17.7-14.3-32-32-32zM288 0c-17.7 0-32 14.3-32 32v96h64V32c0-17.7-14.3-32-32-32zM32 160c-17.7 0-32 14.3-32 32s14.3 32 32 32v32c0 77.4 55 142 128 156.8V480c0 17.7 14.3 32 32 32s32-14.3 32-32V412.8c12.3-2.5 24.1-6.4 35.1-11.5c-2.1-10.8-3.1-21.9-3.1-33.3c0-80.3 53.8-148 127.3-169.2c.5-2.2 .7-4.5 .7-6.8c0-17.7-14.3-32-32-32H32zM432 512a144 144 0 1 0 0-288 144 144 0 1 0 0 288zm47.9-225c4.3 3.7 5.4 9.9 2.6 14.9L452.4 356H488c5.2 0 9.8 3.3 11.4 8.2s-.1 10.3-4.2 13.4l-96 72c-4.5 3.4-10.8 3.2-15.1-.6s-5.4-9.9-2.6-14.9L411.6 380H376c-5.2 0-9.8-3.3-11.4-8.2s.1-10.3 4.2-13.4l96-72c4.5-3.4 10.8-3.2 15.1 .6z"
+                  />
                 </svg>
               </span>
 
               <h2 class="mt-2 font-bold">Hybrid System</h2>
-
-              <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                Lorem ipsum dolor sit amet consectetur.
-              </p>
-            </a>
-
-            <a
-              class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-              href="/accountant"
-            >
-              <span class="inline-block rounded-lg bg-gray-50 p-3">
-                <svg
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path
-                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
-
-              <h2 class="mt-2 font-bold">Accountant</h2>
-
-              <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                Lorem ipsum dolor sit amet consectetur.
-              </p>
-            </a>
-
-            <a
-              class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-              href="/accountant"
-            >
-              <span class="inline-block rounded-lg bg-gray-50 p-3">
-                <svg
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path
-                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
-
-              <h2 class="mt-2 font-bold">Accountant</h2>
-
-              <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                Lorem ipsum dolor sit amet consectetur.
-              </p>
-            </a>
-
-            <a
-              class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-              href="/accountant"
-            >
-              <span class="inline-block rounded-lg bg-gray-50 p-3">
-                <svg
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path
-                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
-
-              <h2 class="mt-2 font-bold">Accountant</h2>
 
               <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
                 Lorem ipsum dolor sit amet consectetur.
