@@ -28,6 +28,10 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <title>Welcome to Solarich!</title>
   </head>
   <body>
@@ -91,8 +95,8 @@
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Solarich ECorp</span>
               <img
-                class="h-8 w-auto"
-                src="assets\images\website-logo-solarich.png"
+                class="h-12 w-auto"
+                src="assets\images\logo-name-only.png"
                 alt=""
               />
             </a>
@@ -164,8 +168,8 @@
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Solarich ECorp</span>
               <img
-                class="h-8 w-auto"
-                src="assets\images\website-logo-solarich.png"
+                class="h-12 w-auto"
+                src="assets\images\logo-name-only.png"
                 alt=""
               />
             </a>
@@ -226,9 +230,136 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- New Hero Section -->
 
     <section class="bg-white">
+      <div
+        class="container mt-20 max-w-screen-xl mx-auto px-4 py-16 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+      >
+        <div
+          class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16"
+        >
+          <div
+            class="px-4 mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right lg:text-left"
+          >
+            <h1
+              class="text-4xl font-bold leading-none sm:text-5xl text-green-900 drop-shadow-md"
+            >
+              Sustainable <span class="text-yellow-400">energy</span> for a
+              sustainable <span class="text-green-600">future</span>.
+            </h1>
+
+            <p class="mt-4 mb-6 text-xl text-green-900">
+              Allow us to help you empower your home and business with our Solar
+              PV System.
+            </p>
+
+            <div class="mt-4 md:mt-8 mx-auto">
+              <a
+                class="inline-block rounded border border-green-600 bg-green-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-green-600 focus:outline-none focus:ring active:text-green-500"
+                href="/download"
+              >
+                Get A Quote
+              </a>
+            </div>
+
+            <button
+              id="scrollToTopBtn"
+              onclick="scrollToTop()"
+              class="fixed bottom-10 right-10 bg-white text-green-500 p-2 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition-colors focus:outline-none"
+              title="Scroll to Top"
+            >
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 10l7-7m0 0l7 7m-7-7v18"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="max-w-lg mx-auto">
+            <img
+              alt=""
+              src="/assets/images/header-img-1.png"
+              class="h-56 w-full object-cover sm:h-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Associations Images -->
+
+      <div class="max-w-screen-xl mx-auto">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+          <div
+            class="brand-logo flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1"
+          >
+            <img
+              class="h-6"
+              src="assets\images\ja-solar-removebg-preview.png"
+              alt="brand-1"
+            />
+          </div>
+
+          <div
+            class="brand-logo flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1"
+          >
+            <img
+              class="h-10"
+              src="assets\images\longi-removebg-preview.png"
+              alt="brand-1"
+            />
+          </div>
+
+          <div
+            class="brand-logo flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1"
+          >
+            <img
+              class="h-10"
+              src="assets\images\dasolar-removebg-preview.png"
+              alt="brand-1"
+            />
+          </div>
+
+          <div
+            class="brand-logo flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1"
+          >
+            <img
+              class="h-36"
+              src="assets\images\deye-removebg-preview.png"
+              alt="brand-1"
+            />
+          </div>
+
+          <div
+            class="brand-logo flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1"
+          >
+            <img
+              class="h-6"
+              src="assets\images\meritsun-removebg-preview.png"
+              alt="brand-1"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- End of Brand Associations Images -->
+    </section>
+
+    <!-- End of New Hero Section -->
+
+    <!-- Hero Section - will use this template when the video is done -->
+
+    <!-- <section class="bg-white">
       <div
         class="container mt-20 mb-24 mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl"
       >
@@ -299,7 +430,7 @@
         </div>
       </div>
 
-      <!-- Brand Associations Images -->
+      
 
       <div class="max-w-screen-xl mx-auto">
         <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
@@ -355,8 +486,8 @@
         </div>
       </div>
 
-      <!-- End of Brand Associations Images -->
-    </section>
+    
+    </section> -->
 
     <!-- End of Hero Section -->
 
